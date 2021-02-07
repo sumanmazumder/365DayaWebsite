@@ -1,0 +1,4 @@
+@import '../service.component.scss';
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after{
+    background-image: url(../../../assets/images/download.svg) !important;
+}
