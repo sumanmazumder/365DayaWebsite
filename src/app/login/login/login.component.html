@@ -1,0 +1,47 @@
+<!-- <p>login works!</p> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 pt-5 pb-5">
+            <h1 class="text-center mb-5">Login</h1>
+            <!-- <form class="example-form" #loginForm>
+              <mat-form-field appearance="fill">
+                  <mat-label>User Type</mat-label>
+                  <mat-select name="type" class="typefield">
+                    <mat-option value="a">Admin</mat-option>
+                    <mat-option value="d">Dietitian</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter Your Name</mat-label>
+                  <input type="email" matInput placeholder="Enter Your Email" name="email" required>
+                </mat-form-field>
+              
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter Your Email</mat-label>
+                  <input type="password" matInput placeholder="Enter Your Email" name="password" required>
+                </mat-form-field>
+                <button type="submit" class="btn">Login</button>
+              </form> -->
+              <form #loginForm>
+                <div class="form-group">
+                  <label for="type">Type</label>
+                  <select name="type" class="typefield">
+                    <option value="a">Admin</option>
+                    <option value="d">Dietitian</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <!-- <label for="uname"><b>Username</b></label> -->
+                  <input type="text" placeholder="Enter Username" name="email" required>
+                </div>
+                <div class="form-group">
+                  <!-- <label for="psw"><b>Password</b></label> -->
+                  <input type="password" placeholder="Enter Password" name="password" required>
+                </div>
+                <div class="from-group">
+                  <button type="submit" (click)="logIn()" class="btn">Login</button>
+                </div>
+              </form>
+        </div>
+    </div>
+</div>

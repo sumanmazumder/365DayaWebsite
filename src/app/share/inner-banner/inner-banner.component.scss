@@ -1,0 +1,42 @@
+.crm-banner{
+    .inner-image{
+  
+    
+      &:before{
+        content:'';
+        position: absolute;
+        left: 0px;
+        right:0px;
+        margin:0 auto;
+        background: url(../../../assets/images/crm01.png) center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        animation: round 25s infinite;
+        // animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
+      &:after{
+        content:'';
+        position: absolute;
+        left: 0px;
+        right:0px;
+        margin:0 auto;
+        background: url(../../../assets/images/crm02.png) center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top:0px;
+        animation: round 9s infinite;
+        // animation-fill-mode: none, backwards;
+        animation-timing-function: linear;
+        animation-direction: alternate-reverse;
+      }
+  }
+  }
+  @keyframes round{
+    0%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+  }

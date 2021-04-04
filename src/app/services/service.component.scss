@@ -1,0 +1,132 @@
+@import '../../../styles.scss';
+.banner{
+    padding: 58px 0px;
+    h1{
+        margin-bottom: 20px;
+        span{
+            color: $primary_color;
+            font-weight: 800;
+        }
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        color: #000000;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        li{
+            width: calc(100% / 4);
+            .custom-control{
+                background-color: #f1f1f1;
+                border-radius: 35px;
+                min-height: 42px;
+                margin-right: 10px;
+                span{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 35px;
+                    background-color: $primary_color;
+                    display: inline-block;
+                    position: absolute;
+                    left:3px;
+                    top:3px;
+                    padding: 2px;
+                    padding-bottom:0px;
+                    img{
+                        max-width: 100%;
+                        width:16px;
+                        height: 16px;
+                    }
+                }
+            }
+            .custom-control-label{
+                padding: 8px 0px;
+                font-weight: 400;
+                width:100%;
+                text-align: left;
+                padding-left: 40px;
+                box-sizing:border-box;
+            }
+            &:nth-child(even){
+                .custom-control{
+                    span{
+                        background-color: $secondary_color;
+                    }
+                }
+            }
+        }
+    }
+    a{
+        @include btn_style($bg_color:$primary_color, $padding:7px 30px, $color:$primary_color);
+        margin-top: 40px;
+    }
+}
+.custom-control-input:checked~.icon{
+    // background-color: $primary_color;
+    display: none !important;
+}
+.custom-control-input:checked~.custom-control-label::after{
+    opacity:1;
+}
+.custom-control-label::before{
+    visibility: hidden;
+}
+.custom-control-label::after{
+    width: 32px;
+    height: 32px;
+    border-radius: 35px;
+    background-color: #f1f1f1;
+    border:1px solid $primary_color;
+    left:3px;
+    opacity: 0;
+    color: $primary_color;
+}
+
+.video{
+    background-color: #fdfdfd;
+    padding: 40px 0px;
+    video{
+        width: 100%;
+        box-shadow: 0px 10px 11px #f1f1f1;
+    }
+}
+.two-section{
+    padding: 40px 0px;
+}
+.light-bg{
+    background: #f6f7f9;
+}
+#accordion{
+    .card-header{
+        padding: 0px;
+        background: transparent;
+    }
+    .card{
+        border:0px;
+        background:transparent;
+        h5{
+            button{
+
+            // padding: 0px;
+            width: 100%;
+            font-family: "Sofia Pro Light";
+            font-weight: bold;
+            
+            text-align: left;
+            }
+        }
+        .btn.btn-link{
+            color: $primary_color;
+            font-size: 20px;
+        }
+        .btn.btn-link.collapsed{
+            font-size: 18px;
+            color: #000000;
+        }
+    }
+}
